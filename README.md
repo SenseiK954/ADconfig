@@ -17,12 +17,12 @@ This tutorial outlines the implementation of on-premises Windows Active Director
 - Windows Server 2022
 - Windows 10 (21H2)
 
-<h2>High-Level Deployment and Configuration Steps</h2>
+<h2>Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+1. Create VM with Windows Server OS installed and install/enable Active Directory Domain Services.
+2. Create a Client VM and join it to the domain/network.
+3. Within AD create a organizational unit for Admin and create a user account and grant admin permissions. 
+4. Create random user accounts in AD and attempt to login to the client as one.
 
 <h2>Deployment and Configuration Steps</h2>
 
