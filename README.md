@@ -8,7 +8,7 @@ Hey, I'm Kenneth, an IT Professional. This is a tutorial that outlines the imple
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (VMs/Compute)
-- RDP (Port: 3389)
+- RDP (Port: 3389) (testing only; use SSH if need secure)
 - Active Directory Domain Services (Windows Server 2022)
 - PowerShell
 
@@ -28,17 +28,18 @@ Hey, I'm Kenneth, an IT Professional. This is a tutorial that outlines the imple
 <h2>Installation Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/O9UXrQ5.png" height="50%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-<p> 1. First, we need to setup two virtual machinces in Microsoft Azure. One will be for our Server which will host AD and one will act as a client attached to the same Domain as our Server. The server will act as the Domain Controller for this network. In Azure, we need to create a resource group (RG) and then our virtual machines (or u can start creating VMs and it will allow u to create a RG from there). Make sure to give your VMs distinct names (so not to get them confused) and right down login information if neccesary. Next Step...
-
+<p> 1. First, we need to setup two virtual machinces in Microsoft Azure. One will be for our Server which will host AD and one will act as a client attached to the same Domain as our Server. The server will act as the Domain Controller for this network. In Azure, we need to create a resource group (RG) and then our virtual machines (or u can start creating VMs and it will allow u to create a RG from there). Make sure to give your VMs distinct names (so not to get them confused) and right down login information if neccesary. Next step...
 </p>
-<br />
 
+<b>Note: Before we hop on to our machines we need to set the private IP address of our Server VM to static (this way it doesn't change even if turned off and the client can join the domain easier). You can do this by going to the VM>Networking>Network Interface (NIC)>IP configurations>click first listed ipconfig>then set from dynamic to static then save. Back to the steps... </b>
+</p>
+<p>
+2. Next, we log into our server VM using RDP for windows (if using MacOS use alternative app that supports RDP for windows).  
+</p>
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
+
 <br />
