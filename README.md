@@ -36,10 +36,10 @@ Hey, I'm Kenneth, an IT Professional. This is a tutorial that outlines the imple
 <b>Note: Before we hop on to our machines we need to set the private IP address of our Server VM to static (this way it doesn't change even if turned off and the client can join the domain easier). You can do this by going to the VM>Networking>Network Interface (NIC)>IP configurations>click first listed ipconfig>then set from dynamic to static then save. Back to the steps... </b>
 </p>
 <p>
-2. Next, we log into our server VM using RDP for windows (if using MacOS use alternative app that supports RDP for windows).  
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+2. Next, we log into our server VM using RDP for windows (if using MacOS use alternative app that supports RDP for windows).  
 </p>
 
 <br />
