@@ -21,8 +21,8 @@ Hey, I'm Kenneth, an IT Professional. This is a tutorial that outlines the imple
 
 1. Create VM with Windows Server OS and create a VM with Windows 10/11 OS. 
 2. Install/enable Active Directory (AD) Domain Services in the Server VM, make the server a Domain Controller, and then add the Client VM to that Domain.
-3. Within AD create a organizational unit for Admin and create a user account and grant admin permissions. 
-4. Using Powershell script, create randomized user accounts in AD and attempt to login to the client as one.
+3. Within AD, create a organizational units for Admin, Employees, and Clients, then create a couple user accounts with one having Admin permissions. 
+4. Using a Powershell script, create randomized user accounts in AD and attempt to login to the client as one.
 5. Mess around with capabilities of AD.
 
 <h2>Installation Steps</h2>
@@ -42,9 +42,14 @@ Hey, I'm Kenneth, an IT Professional. This is a tutorial that outlines the imple
 2a. Next, we log into our server VM using RDP for windows (if using MacOS use alternative app that supports RDP for windows). Once logged on, open "Server Manager" (if not already open). From here click "Add roles and features". In the installation wizard, click next until you get to "Server Roles" then select/enable "Active Directory Domain Services"(add features). Then click next all the way until you click install. Now you can click close on the wizard then you should see a indicator by "Notifications" (the flag). Click on notifications and then click "Promote this server to a domain controller". Once open, click "add a new forest and type in "mydomain.com" or a random domain name in the box (make sure its not real for lab purposes and <b> WRITE IT DOWN</b>). Click next, then enter a password (it is not necessary for the lab but write it down just in case). Click next the rest of the wizard and then install. Once installed, it will restart the machince, so log back into the VM.
 Next step...
 
+<img src="https://i.imgur.com/vOUjHa4.png" height="60%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/UsWWf3v.png" height="60%" width="70%" alt="Disk Sanitization Steps"/>
+  
 2b. Now that AD is installed, we need to join the client VM to the domain. To do that we need to change the DNS settings of our client VM and make our server a temporary DNS server in the client's eyes. Minimize your RDP connections and go to the Azure portal. From Azure, go to the server VM and copy the PRIVATE ip address (located in the networking section, make sure its not the public ip). Now go to your client VM, click the networking section> click the NIC> click DNS Servers> click custom> enter the private ip address of your server VM (make sure no spaces), then save. Restart your client VM and relogin once ready. Once logged on, open Settings> go to System> go to About> then click "Rename this PC(advanced)"> click change> then enter your domain name that you wrote down in step 2a. Then it will prompt you to login, use the login credentials for your server VM (before it became a domain, don't add a .com). Next step...
-
-
 </p>
+<p>
+3a. To continue, open up and log in to the server VM. Search and open up Active Directory Users and Computers. On the left panel, click the drop down arrow of the domain name (ex. mydomain.com). You can click on Computers to see your client VM there and on Domain Controllers to see the server VM there by clicking on those respective links. After, right click to domain name> go to new> then click "Organizational Unit"(OU)> name it Admin. Then create two more: one names employees and the other named clients. Next, we will create a admin user by the name of Jane Doe (it can be any name you want). Right click your Adnin OU> go to new> then click user. Enter the name of your user and username (no spaces, use underscores instead). Then hit next, enter a password (you can reuse your current one or make another just make sure ot keep track of it), before you clcik next <b>UNCHECK</b> the "user must change password at next logon" (this is for lab only, in real world you should keep it). Next step...
 
-<br />
+3b.  
+
+
