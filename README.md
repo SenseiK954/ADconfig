@@ -39,7 +39,8 @@ Hey, I'm Kenneth, an IT Professional. This is a tutorial that outlines the imple
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-2. Next, we log into our server VM using RDP for windows (if using MacOS use alternative app that supports RDP for windows).  
+2a. Next, we log into our server VM using RDP for windows (if using MacOS use alternative app that supports RDP for windows). Once logged on, open "Server Manager" (if not already open). From here click "Add roles and features". In the installation wizard, click next until you get to "Server Roles" then select/enable "Active Directory Domain Services"(add features). Then click next all the way until you click install. Now you can click close on the wizard then you should see a indicator by "Notifications". Click the notification and then click "Promote this server to a domain controller". Once open, click "add a new forest and type in a random domain name in the box (make sure its not real for lab purposes). Click next, then enter a password (it is not necessary for the lab but write it down just in case). Click next the rest of the wizard and then install.  
+2b.
 </p>
 
 <br />
