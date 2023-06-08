@@ -23,7 +23,7 @@ Hey, I'm Kenneth, an IT Professional. This is a tutorial that outlines the imple
 2. Install/enable Active Directory (AD) Domain Services in the Server VM, make the server a Domain Controller, and then add the Client VM to that Domain.
 3. Within AD, create a organizational units for Admin, Employees, and Clients, then create a couple user accounts with one having Admin permissions. 
 4. Using a Powershell script, create randomized user accounts in AD and attempt to login to the client as one.
-5. Mess around with capabilities of AD.
+5. Mess around with capabilities of AD to your hearts content.
 
 <h2>Installation Steps</h2>
 
@@ -61,6 +61,9 @@ Next step...
 <p>
 4.  Moving on, now that we have our AD up, we are going to populate it with random user accounts and try to logon to them using our client VM. Before that, we need to open our client VM up to RDP connections of non-administrative users in the domain (this way any user in the domain can log into the client VM). Now, login to the client VM using the ADMIN credentials (Jane doe). Once loaded, navigate to Settings> System> left panel click "Remote Desktop"> click the hyperlink under "User accounts"> click add> type in "domain users" then check names> then OK out. Afterward, log into your AD server VM (using your admin account). Search and open the Powershell.ise as <b>ADMINISTRATOR</b> (right click then click run as administrator). 
 Click this <a href="https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1">link</a> and copy the script (this is a powershell script , which will help us automatically generate randomized domain user accounts which we can use to test the login of of our client VM. <b> Note: Scripting is a great resourse to automate repetitive tasks.</b> In Powershell, click new and then paste the script. Run the script (press the play button at top) then you can let it run until complete or you can stop it prematurely if you wish. Now you can navigate to the _EMPLOYEES OU in AD Users and Computers and observe that users created.
-
+Now you should be able to take any of these users and login to the client VM. The password to each will be password1 but you can change it while in AD. 
+Next step...
 </p>
-
+<p>
+5.  <b> CONGRADULATIONS!!! You have now installed and configured AD, created a domain, created OUs, and created a ton of user accounts. Feel free to play around with all the possibilities of AD. Also, explore other functions and concepts to further your knowledge like Group Policy and Powershell Scripting!</b>
+</p>
